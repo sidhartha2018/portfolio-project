@@ -1,14 +1,19 @@
 
 <!doctype html>
+{% load staticfiles %}
+
+
 <html lang="en">
+
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Album example for Bootstrap</title>
+
+    <title>Sidhartha Chanda</title>
 
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -20,15 +25,15 @@
 
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Sidhartha Chanda</a>
+  <a class="navbar-brand" href="{% url 'home' %}">Sidhartha Chanda</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link" href="#">Instagram</a>
-      <a class="nav-item nav-link" href="#">Resume</a>
-      <a class="nav-item nav-link" href="#">Blog</a>
+      <a class="nav-item nav-link" href="https://www.instagram.com/sidd_c/">Instagram</a>
+      <a class="nav-item nav-link" href="{% static 'Current_Resume_Sidhartha_Chanda.pdf' %}">Resume</a>
+      <a class="nav-item nav-link" href="{% url 'allblogs'%}">Blog</a>
 
     </div>
   </div>
@@ -45,6 +50,7 @@
             <a href="mailto:sidhartha_chanda@rocketmail.com" class="btn btn-primary my-2">Email me</a>
 
           </p>
+          <img src="{% static 'dp.jpg'%}" height ="300" />
         </div>
       </section>
 
